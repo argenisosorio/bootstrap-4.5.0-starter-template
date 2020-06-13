@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <title>Filter tables</title>
+    <link rel="icon" href="static/img/bootstrap-solid.svg">
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles CSS -->
+    <link href="static/css/styles.css" rel="stylesheet">
+  </head>
+<body>
+<main role="main">
+  <!-- container -->
+  <div class="container">
+    <h1 class="mb-3">
+      <a href="index.html">Home</a> > Filter tables
+    </h1>
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="myTable">
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@mail.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@greatstuff.com</td>
+        </tr>
+        <tr>
+          <td>Anja</td>
+          <td>Ravendale</td>
+          <td>a_r@test.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /container -->
+</main>
+<!-- jQuery
+================================================== -->
+<script src="static/js/jquery/jquery-3.5.1.slim.min.js"></script>
+<!-- Bootstrap JS
+================================================== -->
+<script src="static/bootstrap/js/popper.min.js"></script>
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>
