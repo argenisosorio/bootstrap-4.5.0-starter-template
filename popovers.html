@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <title>Popovers</title>
+    <link rel="icon" href="static/img/bootstrap-solid.svg">
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles CSS -->
+    <link href="static/css/styles.css" rel="stylesheet">
+  </head>
+<body>
+<main role="main">
+  <!-- container -->
+  <div class="container">
+    <h1 class="mb-3">
+      <a href="index.html">Home</a> > Popovers
+    </h1>
+    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+    <h2 class="mt-3 mb-3">Four directions</h2>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on top
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on right
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+    sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on bottom
+    </button>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+      Popover on left
+    </button>
+    <h2 class="mt-3 mb-3">Dismiss on next click</h2>
+    <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+    <h2 class="mt-3 mb-3">Disabled elements</h2>
+    <span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
+      <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+    </span>
+  </div>
+  <!-- /container -->
+</main>
+<!-- jQuery
+================================================== -->
+<script src="static/js/jquery/jquery-3.5.1.slim.min.js"></script>
+<!-- Bootstrap JS
+================================================== -->
+<script src="static/bootstrap/js/popper.min.js"></script>
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+</body>
+</html>
